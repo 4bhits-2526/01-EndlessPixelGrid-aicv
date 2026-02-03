@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class EndlessPixelUI : MonoBehaviour
 {
@@ -8,6 +10,12 @@ public class EndlessPixelUI : MonoBehaviour
 
     [SerializeField] private GameObject inputPanel;
     [SerializeField] private GameObject inputImg;
+
+    [SerializeField] private GameObject inputQ;
+
+    private bool[] gridInput = new bool[7];
+    private GameObject[,] gridObj = new GameObject[10,7];
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +25,7 @@ public class EndlessPixelUI : MonoBehaviour
             int row = (i / 7) + 1;
             int col = (i % 7) + 1;
             newImg.name = "img" + row + col;
+            
         }
 
         for (int i = 0; i < 7; i++)
@@ -29,6 +38,6 @@ public class EndlessPixelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
